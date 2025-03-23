@@ -61,7 +61,7 @@ body{
 .imput-field input {
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #7336ff;
+    border-bottom: 2px solid #2b4bd9;
     font-size: 18px;
     border-radius: 2px;
     padding: 5px;
@@ -70,11 +70,11 @@ body{
 
 .imput-field imput:focus {
     outline: none;
-    border-bottom: 3px solid #7336ff;
+    border-bottom: 3px solid #2b4bd9;
 }
 
 #generate {
-    background-color: #7336ff;
+    background-color: #2b4bd9;
     border: none;
     padding: 12px 20px;
     border-radius: 4px;
