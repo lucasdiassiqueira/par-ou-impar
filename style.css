@@ -83,3 +83,13 @@ body {
     font-size: 50px;
     font-weight: 600;
 }
+
+.square {
+    background-color: #2b4bd9; /* Cor de fundo do quadrado */
+    color: #fff; /* Cor do texto dentro do quadrado */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaço entre o quadrado acima */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Tamanho do texto */
+}
