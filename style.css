@@ -84,12 +84,41 @@ body {
     font-weight: 600;
 }
 
-.square {
-    background-color: #2b4bd9; /* Cor de fundo do quadrado */
-    color: #fff; /* Cor do texto dentro do quadrado */
-    padding: 20px; /* Espaçamento interno */
-    margin-top: 20px; /* Espaço entre o quadrado acima */
-    border-radius: 8px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o texto */
-    font-size: 18px; /* Tamanho do texto */
+.game-container {
+    background-color: #343439;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-container h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#gameButtons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#gameButtons button {
+    background-color: #2b4bd9;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: #efefef;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#gameResult {
+    font-size: 20px;
+    font-weight: 600;
 }
