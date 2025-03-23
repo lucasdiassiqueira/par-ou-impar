@@ -1,14 +1,15 @@
-function getRandomNumber() {
-    const min = parseInt(prompt("Digite o valor mínimo:"));
-    const max = parseInt(prompt("Digite o valor máximo:"));
-    
-    if (isNaN(min) || isNaN(max) || min > max) {
-        alert("Valores inválidos. Certifique-se de que são números e que o mínimo é menor que o máximo.");
-        return null;
-    }
-    
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+document.getElementById('generate').addEventListener('click', function() {
+    const min = parseInt(document.getElementById('min').value);
+    const max = parseInt(document.getElementById('max').value);
+    const resultElement = document.getElementById('result').querySelector('span');
 
-// Exemplo de uso
-console.log(getRandomNumber());
+    if (isNaN(min) || isNaN(max) || min > max) {
+        resultElement.textContent = 'Valores inválidos!';
+        resultElement.style.color = '#e74c3c';
+        return;
+    }
+
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    resultElement.textContent = randomNumber;
+    resultElement.style.color = '#2b4bd9';
+});
