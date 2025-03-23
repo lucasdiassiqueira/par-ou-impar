@@ -1,15 +1,14 @@
-const button = document.getElementById('generate');
-
-button.addEventListener('click', function() {
-    const min= parseInt(document.getElementById('min').value);
-    const max= parseInt(document.getElementById('max').value);
-
-    let result =  Math.floor(Math.random() * (max - min + 1)) + min
-
-    if (isNaN(result)) {
-        result = 'Valor Inválido';
+function getRandomNumber() {
+    const min = parseInt(prompt("Digite o valor mínimo:"));
+    const max = parseInt(prompt("Digite o valor máximo:"));
+    
+    if (isNaN(min) || isNaN(max) || min > max) {
+        alert("Valores inválidos. Certifique-se de que são números e que o mínimo é menor que o máximo.");
+        return null;
     }
+    
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-    document.querySelector('#result > span').textContent = result;
-
-})
+// Exemplo de uso
+console.log(getRandomNumber());
