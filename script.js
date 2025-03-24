@@ -9,10 +9,10 @@ function checkGuess(choice) {
     const isEven = currentNumber % 2 === 0;
     const resultBox = document.getElementById("resultBox");
     if ((choice === 'par' && isEven) || (choice === 'impar' && !isEven)) {
-        resultBox.textContent = "Você acertou!";
+        resultBox.textContent = "Einstein? slk, acertou!";
         resultBox.style.color = "green";
     } else {
-        resultBox.textContent = "Você errou! Tente novamente.";
+        resultBox.textContent = "'Jênio'! Tente novamente.";
         resultBox.style.color = "red";
     }
     generateNumber();
