@@ -1,23 +1,22 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Par ou Ímpar</title>
     <link rel="stylesheet" href="style.css">
-    <title>Jogo de Par ou Ímpar</title>
-    <style>
-        #resultMessage {
-            visibility: hidden; /* Inicialmente escondido */
-        }
-    </style>
 </head>
 <body>
-    <h1>Jogo de Par ou Ímpar</h1>
-    <p id="randomNumber"></p>
-    <button onclick="checkGuess('par')">Par</button>
-    <button onclick="checkGuess('impar')">Ímpar</button>
-    <p id="resultMessage"></p>
-
-    <script src="seu_script.js"></script> <!-- Substitua "seu_script.js" pelo nome do seu arquivo JavaScript -->
+    <div class="container">
+        <h2>Jogo Par ou Ímpar</h2>
+        <div class="number" id="randomNumber">?</div>
+        <div class="buttons">
+            <button onclick="checkGuess('par')">Par</button>
+            <button onclick="checkGuess('impar')">Ímpar</button>
+        </div>
+        <div id="resultBox" class="result-box">Adivinhe se o número é par ou ímpar!</div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

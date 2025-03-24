@@ -7,18 +7,15 @@ function generateNumber() {
 
 function checkGuess(choice) {
     const isEven = currentNumber % 2 === 0;
-    const resultMessage = document.getElementById("resultMessage");
-    
+    const resultBox = document.getElementById("resultBox");
     if ((choice === 'par' && isEven) || (choice === 'impar' && !isEven)) {
-        resultMessage.textContent = "Você acertou!";
-        resultMessage.style.color = "green";
+        resultBox.textContent = "Você acertou!";
+        resultBox.style.color = "green";
     } else {
-        resultMessage.textContent = "Você errou! Tente novamente.";
-        resultMessage.style.color = "red";
+        resultBox.textContent = "Você errou! Tente novamente.";
+        resultBox.style.color = "red";
     }
-    
-    resultMessage.style.visibility = "visible"; // Torna a mensagem visível
-    generateNumber(); // Gera um novo número após a verificação
+    generateNumber();
 }
 
 // Gera um número aleatório ao iniciar
