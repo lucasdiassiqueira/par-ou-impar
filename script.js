@@ -13,9 +13,17 @@ button.addEventListener('click', function() {
     document.querySelector('#result > span').textContent = result;
 });
 
+const parButton = document.getElementById('parButton');
+const imparButton = document.getElementById('imparButton');
+const gameResult = document.getElementById('gameResult');
+const gameMessage = document.getElementById('gameMessage');
+
 function checkGuess(choice) {
-    if (generatedNumber === null) {
+    const generatedNumber = parseInt(document.querySelector('#result > span').textContent);
+
+    if (isNaN(generatedNumber)) {
         gameMessage.textContent = 'Gere um número primeiro!';
+        gameMessage.style.color = 'black';
     } else {
         const isEven = generatedNumber % 2 === 0;
         if ((choice === 'par' && isEven) || (choice === 'impar' && !isEven)) {
