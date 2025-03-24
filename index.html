@@ -1,19 +1,21 @@
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo Par ou Ímpar</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <h2>Jogo Par ou Ímpar</h2>
         <div class="number" id="randomNumber">?</div>
         <div class="buttons">
             <button onclick="checkGuess('par')">Par</button>
             <button onclick="checkGuess('impar')">Ímpar</button>
         </div>
+        <p id="resultMessage"></p>
     </div>
     <script src="script.js"></script>
 </body>

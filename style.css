@@ -34,3 +34,10 @@ body {
 .buttons button:hover {
     background-color: #666;
 }
+#resultMessage {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: yellow;
+}
+
