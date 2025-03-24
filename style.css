@@ -42,14 +42,14 @@ body {
 }
 
 .buttons button:hover {
-    background-color: #efefef;
+    background-color: #666;
 }
 
 .result-box {
     margin-top: 15px;
     font-size: 16px;
     font-weight: bold;
-    background-color: #333;
+    background-color: #efefef;
     padding: 10px;
     border-radius: 8px;
     color: rgb(43, 177, 240);
