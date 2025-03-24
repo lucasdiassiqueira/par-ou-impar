@@ -1,54 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="stylesheet" href="style.css">
-
-    <title>Document</title>
+    <title>Desafio do Par ou Ímpar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Gerador de Números</h2>
-        
-        <div class="input-group">
-            <div class="input-field">
-                <label for="min">Mín:</label>
-                <input id="min" type="number" name="Min">
-            </div>
-            
-            <div class="input-field">
-                <label for="max">Máx:</label>
-                <input id="max" type="number" name="Max">
-            </div>
-        </div>
-
-        <button id="generate">Gerar</button>
-
-        <div id="result">
-            <span>
-                00
-            </span>
-        </div>
-        
-        <div class="game-container">
-            <h3>Escolha Par ou Ímpar</h3>
-            <div id="gameButtons">
-                <button id="parButton">Par</button>
-                <button id="imparButton">Ímpar</button>
-            </div>
-            <div id="gameResult" style="display: none;">
-                <span id="gameMessage"></span>
-            </div>
-        </div>
-
-</div>
+        <h1>Desafio do Par ou Ímpar</h1>
+        <p>Escolha Par ou Ímpar:</p>
+        <button id="par">Par</button>
+        <button id="impar">Ímpar</button>
+        <div id="resultado"></div>
+        <div id="pontos">Pontos: 0</div>
     </div>
- 
     <script src="script.js"></script>
-    
-</div>
 </body>
 </html>

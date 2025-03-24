@@ -1,17 +1,28 @@
-const button = document.getElementById('generate');
+let pontos = 0;
 
-button.addEventListener('click', function() {
-    const min = parseInt(document.getElementById('min').value);
-    const max = parseInt(document.getElementById('max').value);
+document.getElementById('par').addEventListener('click', function() {
+    jogar('par');
+});
 
-    let result = Math.floor(Math.random() * (max - min + 1)) + min;
+document.getElementById('impar').addEventListener('click', function() {
+    jogar('impar');
+});
 
-    if (isNaN(result)) {
-        result = 'Valor inválido';
+function jogar(escolha) {
+    const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    const ehPar = numeroAleatorio % 2 === 0;
+    const resultado = ehPar ? 'par' : 'ímpar';
+
+    if (resultado === escolha) {
+        pontos++;
+        document.getElementById('resultado').innerText = `Você acertou! O número ${numeroAleatorio} é ${resultado}.`;
+    } else {
+        pontos--;
+        document.getElementById('resultado').innerText = `Você errou! O número ${numeroAleatorio} é ${resultado}.`;
     }
 
-    document.querySelector('#result > span').textContent = result;
-});
+    document.getElementById('pontos').innerText = `Pontos: ${pontos}`;
+}
 
 
 
