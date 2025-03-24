@@ -1,17 +1,19 @@
 const button = document.getElementById('generate');
+let generatedNumber; // Variável global para armazenar o número gerado
 
 button.addEventListener('click', function() {
     const min = parseInt(document.getElementById('min').value);
     const max = parseInt(document.getElementById('max').value);
 
-    let result = Math.floor(Math.random() * (max - min + 1)) + min;
+    generatedNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    if (isNaN(result)) {
-        result = 'Valor inválido';
+    if (isNaN(generatedNumber)) {
+        generatedNumber = 'Valor inválido';
     }
 
-    document.querySelector('#result > span').textContent = result;
+    document.querySelector('#result > span').textContent = generatedNumber;
 
+    console.log("Número gerado:", generatedNumber); // Agora você pode acessar fora do evento
 });
 
 
