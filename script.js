@@ -18,11 +18,11 @@ function checkGuess(choice) {
     generateNumber();
 }
 
-// Gera um número aleatório ao iniciar
+
 generateNumber();
 createStars();
 
-// Função para criar estrelas
+// estrelas
 function createStars() {
     const starField = document.createElement("div");
     starField.classList.add("stars");
@@ -35,7 +35,7 @@ function createStars() {
         const size = Math.random() * 3 + 1;
         const positionX = Math.random() * 100 + "%";
         const positionY = Math.random() * 100 + "%";
-        const duration = Math.random() * 2 + 1;  // Duração da animação de brilho
+        const duration = Math.random() * 2 + 1; 
 
         star.style.width = `${size}px`;
         star.style.height = `${size}px`;
