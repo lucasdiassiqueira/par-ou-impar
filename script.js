@@ -25,11 +25,13 @@ button.addEventListener('click', function() {
     const min = parseInt(document.getElementById('min').value);
     const max = parseInt(document.getElementById('max').value);
 
-    generatedNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-
-    if (isNaN(generatedNumber)) {
-        generatedNumber = 'Valor inválido';
+    // Verifica se os valores mínimo e máximo são válidos
+    if (isNaN(min) || isNaN(max) || min >= max) {
+        alert('Por favor, insira valores válidos para Mín e Máx.');
+        return;
     }
+
+    generatedNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
     document.querySelector('#result > span').textContent = generatedNumber;
     gameResult.style.display = 'none'; // Esconde o resultado do jogo ao gerar um novo número
