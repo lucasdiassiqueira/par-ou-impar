@@ -3,7 +3,6 @@ let currentNumber;
 function generateNumber() {
     currentNumber = Math.floor(Math.random() * 100);
     document.getElementById("randomNumber").textContent = currentNumber;
-    document.getElementById("resultMessage").textContent = "";
 }
 
 function checkGuess(choice) {
@@ -16,6 +15,7 @@ function checkGuess(choice) {
         resultMessage.textContent = "Você errou! Tente novamente.";
         resultMessage.style.color = "red";
     }
+    resultMessage.style.visibility = "visible";
     generateNumber();
 }
 
