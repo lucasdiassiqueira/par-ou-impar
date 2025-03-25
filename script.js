@@ -11,9 +11,11 @@ function checkGuess(choice) {
     if ((choice === 'par' && isEven) || (choice === 'impar' && !isEven)) {
         resultBox.textContent = "Einstein? slk, acertou!";
         resultBox.style.color = "green";
+        resultBox.style.backgroundColor = "white";
     } else {
         resultBox.textContent = "'Jênio'! Tente novamente.";
         resultBox.style.color = "red";
+        resultBox.style.backgroundColor = "white";
     }
     generateNumber();
 }
